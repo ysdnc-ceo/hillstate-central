@@ -1,0 +1,181 @@
+Skip to content
+ 
+Search Gists
+Search...
+All gists
+Back to GitHub
+@ysdnc-ceo
+ysdnc-ceo/index.html Secret
+Created yesterday
+Code
+Revisions
+1
+Clone this repository at &lt;script src=&quot;https://gist.github.com/ysdnc-ceo/291d5566d2671d38d149ca3bb1c77dc0.js&quot;&gt;&lt;/script&gt;
+<script src="https://gist.github.com/ysdnc-ceo/291d5566d2671d38d149ca3bb1c77dc0.js"></script>
+index.html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <title>평택역 힐스테이트 센트럴시티</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .animate-marquee { display: inline-block; animation: marquee 30s linear infinite; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        @keyframes blink { 0%, 100% { background-color: #800020; transform: scale(1); } 50% { background-color: #d40035; transform: scale(1.05); } }
+        .animate-blink { animation: blink 1.5s infinite; }
+        html { scroll-behavior: smooth; }
+        /* 섹션 제목 강조 */
+        .section-title { position: relative; display: inline-block; padding-bottom: 12px; margin-bottom: 32px; font-weight: 900; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background-color: #800020; }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-900 overflow-x-hidden font-sans">
+
+    <div class="bg-[#800020] text-white py-2 overflow-hidden whitespace-nowrap z-[60] relative">
+        <div class="animate-marquee text-sm font-bold">
+            <span class="mx-10">삼성전자 P5 2028년 가동 예정</span>
+            <span class="mx-10">KAIST 평택캠퍼스 2029년 개교 확정</span>
+            <span class="mx-10 text-yellow-300">★관심고객 등록 시 미공개 정보 및 분양 일정 우선 안내★</span>
+            <span class="mx-10">삼성전자 P5 2028년 가동 예정</span>
+        </div>
+    </div>
+
+    <header class="sticky top-0 bg-white/95 backdrop-blur-md shadow-md z-50 px-4 py-3 flex justify-between items-center border-b">
+        <div class="flex items-center gap-2">
+            <img src="logo1.png" alt="로고1" class="h-6 md:h-8" onerror="this.style.display='none'">
+            <img src="logo2.png" alt="로고2" class="h-5 md:h-7" onerror="this.style.display='none'">
+        </div>
+        <a href="tel:1688-4609" class="flex items-center gap-2 border-2 border-[#800020] text-[#800020] px-4 py-1.5 rounded-full font-black text-base md:text-xl shadow-sm">
+            <span style="font-size: 1.2em;">📞</span> 1688-4609
+        </a>
+    </header>
+
+    <section class="w-full">
+        <img src="main-vision.jpg" alt="메인 조감도" class="w-full h-auto">
+    </section>
+
+    <section class="p-4 bg-white sticky top-[68px] z-40 shadow-sm border-b">
+        <div class="flex gap-2 w-full max-w-xl mx-auto">
+            <button onclick="document.getElementById('env').scrollIntoView()" class="flex-1 h-16 bg-slate-100 rounded-xl font-bold text-lg md:text-xl active:scale-95 transition-all">입지환경</button>
+            <button onclick="document.getElementById('complex').scrollIntoView()" class="flex-1 h-16 bg-slate-100 rounded-xl font-bold text-lg md:text-xl active:scale-95 transition-all">단지안내</button>
+            <button onclick="document.getElementById('plan').scrollIntoView()" class="flex-1 h-16 bg-slate-100 rounded-xl font-bold text-lg md:text-xl active:scale-95 transition-all">평면정보</button>
+            <button onclick="document.getElementById('interest').scrollIntoView()" class="flex-1 h-16 animate-blink text-white rounded-xl font-black text-lg md:text-xl shadow-lg">관심고객</button>
+        </div>
+    </section>
+
+    <section id="env" class="reveal py-20 px-4 text-center bg-white border-b">
+        <h2 class="section-title text-3xl">입지환경</h2>
+        <div class="max-w-4xl mx-auto space-y-12">
+            <img src="premium1.jpg" alt="프리미엄" class="w-full rounded-2xl shadow-lg">
+            <img src="map.jpg" alt="지도" class="w-full rounded-2xl shadow-2xl border-4 border-slate-100">
+        </div>
+    </section>
+
+    <section id="complex" class="reveal py-20 bg-slate-100 px-4 text-center border-b">
+        <h2 class="section-title text-3xl text-slate-800">단지안내</h2>
+        <div class="max-w-4xl mx-auto space-y-8">
+            <img src="danzi.jpg" alt="단지" class="w-full rounded-2xl shadow-md">
+            <img src="community1.jpg" alt="커뮤니티1" class="w-full rounded-xl shadow-md border-4 border-white">
+            <img src="community2.jpg" alt="커뮤니티2" class="w-full rounded-xl shadow-md border-4 border-white">
+            <img src="system.jpg" alt="시스템" class="w-full rounded-xl shadow-lg">
+        </div>
+    </section>
+
+    <section id="plan" class="reveal py-20 px-4 text-center bg-white border-b">
+        <h2 class="section-title text-3xl">평면정보</h2>
+        <div class="max-w-4xl mx-auto space-y-24">
+            <div class="space-y-6">
+                <img src="59_type_title.jpg" alt="59" class="h-14 mx-auto">
+                <img src="59_type1.jpg" class="w-full border rounded-xl p-2 shadow-sm">
+                <img src="59_type2.jpg" class="w-full border rounded-xl p-2 shadow-sm">
+            </div>
+            <div class="space-y-6">
+                <img src="84A_type_title.jpg" alt="84A" class="h-14 mx-auto">
+                <img src="84A_type1.jpg" class="w-full border rounded-xl p-2 shadow-sm">
+                <img src="84A_type2.jpg" class="w-full border rounded-xl p-2 shadow-sm">
+            </div>
+            <div class="space-y-6">
+                <img src="84B_type_title.jpg" alt="84B" class="h-14 mx-auto">
+                <img src="84B_type1.jpg" class="w-full border rounded-xl p-2 shadow-sm">
+                <img src="84B_type2.jpg" class="w-full border rounded-xl p-2 shadow-sm">
+            </div>
+            <div class="space-y-6">
+                <img src="84C_type_title.jpg" alt="84C" class="h-14 mx-auto">
+                <img src="84C_type1.jpg" class="w-full border rounded-xl p-2 shadow-sm">
+                <img src="84C_type2.jpg" class="w-full border rounded-xl p-2 shadow-sm">
+            </div>
+            <div class="space-y-6">
+                <img src="106_type_title.jpg" alt="106" class="h-14 mx-auto">
+                <img src="106_type1.jpg" class="w-full border rounded-xl p-2 shadow-sm">
+                <img src="106_type2.jpg" class="w-full border rounded-xl p-2 shadow-sm">
+            </div>
+        </div>
+    </section>
+
+    <section id="interest" class="reveal py-24 px-6 bg-slate-50 border-t">
+        <div class="max-w-md mx-auto bg-white border-4 border-[#800020] p-8 rounded-[40px] shadow-2xl">
+            <h3 class="text-2xl font-black text-center mb-6 pt-4 text-slate-800">관심고객 등록</h3>
+            <div class="space-y-4">
+                <input type="text" placeholder="성함" class="w-full p-4 bg-slate-50 rounded-2xl border outline-none text-lg">
+                <input type="tel" placeholder="연락처 (- 없이)" class="w-full p-4 bg-slate-50 rounded-2xl border outline-none text-lg">
+                <select class="w-full p-4 bg-slate-50 rounded-2xl border outline-none text-lg">
+                    <option value="anytime">통화 가능 시간 : 언제나 가능</option>
+                    <option value="morning">오전 (09:00 ~ 12:00)</option>
+                    <option value="afternoon">오후 (12:00 ~ 18:00)</option>
+                    <option value="evening">저녁 (18:00 이후)</option>
+                </select>
+                <button class="w-full py-5 bg-[#800020] text-white font-black rounded-2xl text-xl shadow-lg active:scale-95 transition-all mt-4">무료 상담 신청하기</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#000033] py-12 px-8">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between gap-6 border-t border-white/5 pt-8">
+            <div class="text-[11px] text-slate-500 space-y-1.5 leading-relaxed">
+                <p>담당자: 강채원 &nbsp; | &nbsp; 연락처: 1688-4609</p>
+                <p>이메일: kcwlove12@naver.com</p>
+                <p>현장주소: 평택브레인시티 일반산업단지 공동 4BL</p>
+            </div>
+            <div class="text-[10px] text-slate-600 font-light max-w-[300px]">
+                ※ 본 사이트의 모든 정보는 소비자의 이해를 돕기 위한 홍보 자료로 실제와 차이가 있을 수 있습니다.
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-[100]">
+        <a href="https://open.kakao.com/..." target="_blank" class="w-16 h-16 bg-[#FEE500] rounded-2xl shadow-xl flex items-center justify-center border-2 border-white">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" class="w-10 h-10" alt="카톡">
+        </a>
+        <a href="tel:1688-4609" class="w-16 h-16 bg-[#800020] rounded-2xl shadow-xl flex items-center justify-center border-2 border-white">
+            <span style="font-size: 2em;">📞</span>
+        </a>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
+@ysdnc-ceo
+Comment
+ 
+Leave a comment
+Footer
+© 2026 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Community
+Docs
+Contact
+Manage cookies
+Do not share my personal information
