@@ -29,18 +29,23 @@
 
     <header class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50">
         <div class="flex justify-between items-center px-4 py-3 border-b border-gray-100">
-            <a href="javascript:location.reload()" class="flex items-center hover:opacity-80 transition-opacity">
-                <img src="logo1.png" alt="로고1" class="h-5 md:h-7" onerror="this.style.display='none'">
-                <img src="logo2.png" alt="로고2" class="h-4 md:h-6 ml-2" onerror="this.style.display='none'">
+            <a href="javascript:location.reload()" class="flex items-center hover:opacity-80 transition-opacity shrink-0">
+                <img src="logo1.png" alt="로고1" class="h-4 md:h-6" onerror="this.style.display='none'">
+                <img src="logo2.png" alt="로고2" class="h-3 md:h-5 ml-1" onerror="this.style.display='none'">
             </a>
-            <a href="tel:1688-4609" onclick="gtag('event', 'conversion', {'send_to': 'AW-18024921490/9IQqCNfs9J4cEJLz-ZJD'});" class="flex items-center gap-1 border-2 border-[#800020] text-[#800020] px-3 py-1 rounded-full font-black text-sm md:text-base">
+            
+            <div class="bg-yellow-400 text-slate-900 px-2 py-1 md:px-3 md:py-1.5 rounded-full font-black text-[10px] md:text-sm animate-soft-pulse shadow-sm border border-white mx-1 whitespace-nowrap">
+                입주까지 500!
+            </div>
+
+            <a href="tel:1688-4609" onclick="gtag('event', 'conversion', {'send_to': 'AW-18024921490/9IQqCNfs9J4cEJLz-ZJD'});" class="flex items-center gap-1 border-2 border-[#800020] text-[#800020] px-2 py-1 rounded-full font-black text-[11px] md:text-base shrink-0">
                 📞 1688-4609
             </a>
         </div>
         
         <div class="bg-[#800020] text-white py-2 overflow-hidden whitespace-nowrap border-b border-[#a00028]">
             <div class="animate-marquee text-xs font-medium">
-                <span class="mx-8 text-yellow-300 font-bold">★계약금 500만원(정액제)으로 입주까지!★</span>
+                <span class="mx-8 text-yellow-300 font-bold">★500만원으로 입주까지!★</span>
                 <span class="mx-8">#GTX-A 연장확정 #GTX-C 강남연결 #KTX 트리플 초역세권</span>
                 <span class="mx-8 text-yellow-300 font-bold">★관심고객 등록 시 미공개 정보 우선 안내★</span>
                 <span class="mx-8">평택역 복합문화광장 조성사업 최대 수혜단지</span>
@@ -56,13 +61,10 @@
     </div>
 
     <section class="w-full relative">
-        <div class="absolute top-4 right-4 z-30 bg-yellow-400 text-slate-900 px-4 py-2 rounded-full font-black text-xs md:text-base shadow-xl border-2 border-white animate-soft-pulse whitespace-nowrap">
-            💰 500만원으로 입주까지!
-        </div>
         <img src="main-vision.png" alt="메인 조감도" class="w-full h-auto relative z-10">
     </section>
 
-    <section class="p-4 bg-white sticky top-[106px] z-40 shadow-sm border-b">
+    <section class="p-4 bg-white sticky top-[100px] md:top-[106px] z-40 shadow-sm border-b">
         <div class="flex gap-2 w-full max-w-xl mx-auto">
             <button onclick="document.getElementById('env').scrollIntoView()" class="flex-1 h-14 bg-slate-100 rounded-xl font-bold text-sm md:text-base active:scale-95 transition-all">입지환경</button>
             <button onclick="document.getElementById('complex').scrollIntoView()" class="flex-1 h-14 bg-slate-100 rounded-xl font-bold text-sm md:text-base active:scale-95 transition-all">단지안내</button>
@@ -130,7 +132,7 @@
     <footer class="bg-[#000033] py-12 px-8">
         <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between gap-6 border-t border-white/5 pt-8">
             <div class="text-[11px] text-slate-500 space-y-1.5 leading-relaxed">
-                <p>담당자: 강채원 &nbsp; | &nbsp; 연락처: 1688-4609</p>
+                <p>홈페이지 관리자: 강채원 &nbsp; | &nbsp; 대표번호: 1688-4609</p>
                 <p>이메일: kcwlove12@naver.com</p>
                 <p>현장주소: 경기도 평택시 합정동 835번지 일원</p>
             </div>
