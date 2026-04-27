@@ -35,34 +35,33 @@
         </div>
     </div>
 
-    <header class="sticky top-0 bg-white/95 backdrop-blur-md shadow-md z-50 px-4 py-3 flex justify-between items-center border-b">
-        <div class="flex items-center gap-2">
-            <a href="javascript:location.reload()" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                <img src="logo1.png" alt="로고1" class="h-6 md:h-8" onerror="this.style.display='none'">
-                <img src="logo2.png" alt="로고2" class="h-5 md:h-7" onerror="this.style.display='none'">
+    <header class="sticky top-0 bg-white shadow-md z-50">
+        <div class="flex justify-between items-center px-4 py-3 border-b">
+            <a href="javascript:location.reload()" class="flex items-center hover:opacity-80 transition-opacity">
+                <img src="logo1.png" alt="로고1" class="h-5 md:h-7" onerror="this.style.display='none'">
+                <img src="logo2.png" alt="로고2" class="h-4 md:h-6 ml-2" onerror="this.style.display='none'">
+            </a>
+            <a href="tel:1688-4609" onclick="gtag('event', 'conversion', {'send_to': 'AW-18024921490/9IQqCNfs9J4cEJLz-ZJD'});" class="flex items-center gap-1 border-2 border-[#800020] text-[#800020] px-3 py-1 rounded-full font-black text-sm md:text-base">
+                📞 1688-4609
             </a>
         </div>
-        <a href="tel:1688-4609" onclick="gtag('event', 'conversion', {'send_to': 'AW-18024921490/9IQqCNfs9J4cEJLz-ZJD'});" class="flex items-center gap-2 border-2 border-[#800020] text-[#800020] px-4 py-1.5 rounded-full font-black text-base md:text-xl shadow-sm">
-            <span style="font-size: 1.2em;">📞</span> 1688-4609
-        </a>
+        <div class="bg-slate-50 py-2.5 flex justify-center gap-2 px-4 overflow-x-auto whitespace-nowrap">
+            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-bold text-[11px] md:text-xs border border-blue-200">#GTX-A 연장확정</span>
+            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full font-bold text-[11px] md:text-xs border border-orange-200">#GTX-C 강남연결</span>
+            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full font-bold text-[11px] md:text-xs border border-red-200">#KTX 초역세권</span>
+        </div>
     </header>
-
-    <div class="bg-white py-4 flex flex-wrap justify-center gap-2 px-4 shadow-sm">
-        <span class="bg-blue-100 text-blue-800 px-3 py-1.5 rounded-full font-bold text-xs md:text-sm">#GTX-A 연장확정</span>
-        <span class="bg-orange-100 text-orange-800 px-3 py-1.5 rounded-full font-bold text-xs md:text-sm">#GTX-C 강남연결</span>
-        <span class="bg-red-100 text-red-800 px-3 py-1.5 rounded-full font-bold text-xs md:text-sm">#KTX 초역세권</span>
-    </div>
 
     <section class="w-full">
         <img src="main-vision.png" alt="메인 조감도" class="w-full h-auto">
     </section>
 
-    <section class="p-4 bg-white sticky top-[68px] z-40 shadow-sm border-b">
+    <section class="p-4 bg-white sticky top-[105px] z-40 shadow-sm border-b">
         <div class="flex gap-2 w-full max-w-xl mx-auto">
-            <button onclick="document.getElementById('env').scrollIntoView()" class="flex-1 h-16 bg-slate-100 rounded-xl font-bold text-lg md:text-xl active:scale-95 transition-all">입지환경</button>
-            <button onclick="document.getElementById('complex').scrollIntoView()" class="flex-1 h-16 bg-slate-100 rounded-xl font-bold text-lg md:text-xl active:scale-95 transition-all">단지안내</button>
-            <button onclick="document.getElementById('plan').scrollIntoView()" class="flex-1 h-16 bg-slate-100 rounded-xl font-bold text-lg md:text-xl active:scale-95 transition-all">평면정보</button>
-            <button onclick="document.getElementById('interest').scrollIntoView()" class="flex-1 h-16 animate-blink text-white rounded-xl font-black text-lg md:text-xl shadow-lg">관심고객</button>
+            <button onclick="document.getElementById('env').scrollIntoView()" class="flex-1 h-14 bg-slate-100 rounded-xl font-bold text-sm md:text-base active:scale-95 transition-all">입지환경</button>
+            <button onclick="document.getElementById('complex').scrollIntoView()" class="flex-1 h-14 bg-slate-100 rounded-xl font-bold text-sm md:text-base active:scale-95 transition-all">단지안내</button>
+            <button onclick="document.getElementById('plan').scrollIntoView()" class="flex-1 h-14 bg-slate-100 rounded-xl font-bold text-sm md:text-base active:scale-95 transition-all">평면정보</button>
+            <button onclick="document.getElementById('interest').scrollIntoView()" class="flex-1 h-14 animate-blink text-white rounded-xl font-black text-sm md:text-base shadow-lg">관심고객</button>
         </div>
     </section>
 
@@ -89,34 +88,13 @@
     <section id="plan" class="reveal py-20 px-4 text-center bg-white border-b">
         <h2 class="section-title text-3xl">평면정보</h2>
         <div class="max-w-4xl mx-auto space-y-24">
-            <div class="space-y-6">
-                <img src="45_type1.png" class="w-full border rounded-xl p-2 shadow-sm">
-                <img src="45_type2.png" class="w-full border rounded-xl p-2 shadow-sm">
-            </div>
-            <div class="space-y-6">
-                <img src="59A_type1.png" class="w-full border rounded-xl p-2 shadow-sm">
-                <img src="59A_type2.png" class="w-full border rounded-xl p-2 shadow-sm">
-            </div>
-            <div class="space-y-6">
-                <img src="59B_type1.png" class="w-full border rounded-xl p-2 shadow-sm">
-                <img src="59B_type2.png" class="w-full border rounded-xl p-2 shadow-sm">
-            </div>
-            <div class="space-y-6">
-                <img src="84A_type1.png" class="w-full border rounded-xl p-2 shadow-sm">
-                <img src="84A_type2.png" class="w-full border rounded-xl p-2 shadow-sm">
-            </div>
-            <div class="space-y-6">
-                <img src="84B_type1.png" class="w-full border rounded-xl p-2 shadow-sm">
-                <img src="84B_type2.png" class="w-full border rounded-xl p-2 shadow-sm">
-            </div>
-            <div class="space-y-6">
-                <img src="84C_type1.png" class="w-full border rounded-xl p-2 shadow-sm">
-                <img src="84C_type2.png" class="w-full border rounded-xl p-2 shadow-sm">
-            </div>
-            <div class="space-y-6">
-                <img src="112_type1.png" class="w-full border rounded-xl p-2 shadow-sm">
-                <img src="112_type2.png" class="w-full border rounded-xl p-2 shadow-sm">
-            </div>
+            <div class="space-y-6"><img src="45_type1.png" class="w-full border rounded-xl"><img src="45_type2.png" class="w-full border rounded-xl"></div>
+            <div class="space-y-6"><img src="59A_type1.png" class="w-full border rounded-xl"><img src="59A_type2.png" class="w-full border rounded-xl"></div>
+            <div class="space-y-6"><img src="59B_type1.png" class="w-full border rounded-xl"><img src="59B_type2.png" class="w-full border rounded-xl"></div>
+            <div class="space-y-6"><img src="84A_type1.png" class="w-full border rounded-xl"><img src="84A_type2.png" class="w-full border rounded-xl"></div>
+            <div class="space-y-6"><img src="84B_type1.png" class="w-full border rounded-xl"><img src="84B_type2.png" class="w-full border rounded-xl"></div>
+            <div class="space-y-6"><img src="84C_type1.png" class="w-full border rounded-xl"><img src="84C_type2.png" class="w-full border rounded-xl"></div>
+            <div class="space-y-6"><img src="112_type1.png" class="w-full border rounded-xl"><img src="112_type2.png" class="w-full border rounded-xl"></div>
         </div>
     </section>
 
