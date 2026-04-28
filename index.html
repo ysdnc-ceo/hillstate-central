@@ -17,12 +17,20 @@
         .animate-marquee { display: inline-block; animation: marquee 40s linear infinite; }
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        /* 붉은색 배경 플래시 애니메이션 */
+        @keyframes flash-red {
+            0%, 100% { background-color: rgba(128, 0, 32, 1); color: white; }
+            50% { background-color: rgba(255, 255, 255, 0.9); color: #800020; }
+        }
+        .animate-flash { animation: flash-red 2s infinite ease-in-out; }
+
         @keyframes blink { 0%, 100% { background-color: #800020; transform: scale(1); } 50% { background-color: #d40035; transform: scale(1.05); } }
         .animate-blink { animation: blink 1.5s infinite; }
+        
         html { scroll-behavior: smooth; }
         .section-title { position: relative; display: inline-block; padding-bottom: 12px; margin-bottom: 32px; font-weight: 900; }
         .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background-color: #800020; }
-        .animate-soft-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
     </style>
 </head>
 <body class="bg-gray-50 text-slate-900 overflow-x-hidden font-sans">
@@ -34,10 +42,6 @@
                 <img src="logo2.png" alt="로고2" class="h-3 md:h-5 ml-1" onerror="this.style.display='none'">
             </a>
             
-            <div class="bg-yellow-400 text-slate-900 px-2 py-1 md:px-3 md:py-1.5 rounded-full font-black text-[10px] md:text-sm animate-soft-pulse shadow-sm border border-white mx-1 whitespace-nowrap">
-                입주까지 500!
-            </div>
-
             <a href="tel:1688-4609" onclick="gtag('event', 'conversion', {'send_to': 'AW-18024921490/9IQqCNfs9J4cEJLz-ZJD'});" class="flex items-center gap-1 border-2 border-[#800020] text-[#800020] px-2 py-1 rounded-full font-black text-[11px] md:text-base shrink-0">
                 📞 1688-4609
             </a>
@@ -61,6 +65,9 @@
     </div>
 
     <section class="w-full relative">
+        <div class="absolute top-4 right-4 z-30 animate-flash px-4 py-3 shadow-2xl border border-white/20 font-black text-sm md:text-xl whitespace-nowrap">
+            [500만원으로 입주까지!]
+        </div>
         <img src="main-vision.png" alt="메인 조감도" class="w-full h-auto relative z-10">
     </section>
 
@@ -96,13 +103,13 @@
     <section id="plan" class="reveal py-20 px-4 text-center bg-white border-b">
         <h2 class="section-title text-3xl">평면정보</h2>
         <div class="max-w-4xl mx-auto space-y-16">
-            <div class="space-y-4"><img src="45_type1.png" class="w-full border rounded-xl"><img src="45_type2.png" class="w-full border rounded-xl"></div>
-            <div class="space-y-4"><img src="59A_type1.png" class="w-full border rounded-xl"><img src="59A_type2.png" class="w-full border rounded-xl"></div>
-            <div class="space-y-4"><img src="59B_type1.png" class="w-full border rounded-xl"><img src="59B_type2.png" class="w-full border rounded-xl"></div>
-            <div class="space-y-4"><img src="84A_type1.png" class="w-full border rounded-xl"><img src="84A_type2.png" class="w-full border rounded-xl"></div>
-            <div class="space-y-4"><img src="84B_type1.png" class="w-full border rounded-xl"><img src="84B_type2.png" class="w-full border rounded-xl"></div>
-            <div class="space-y-4"><img src="84C_type1.png" class="w-full border rounded-xl"><img src="84C_type2.png" class="w-full border rounded-xl"></div>
-            <div class="space-y-4"><img src="112_type1.png" class="w-full border rounded-xl"><img src="112_type2.png" class="w-full border rounded-xl"></div>
+            <div class="space-y-4"><img src="45_type1.png" class="w-full border rounded-xl shadow-sm"><img src="45_type2.png" class="w-full border rounded-xl shadow-sm"></div>
+            <div class="space-y-4"><img src="59A_type1.png" class="w-full border rounded-xl shadow-sm"><img src="59A_type2.png" class="w-full border rounded-xl shadow-sm"></div>
+            <div class="space-y-4"><img src="59B_type1.png" class="w-full border rounded-xl shadow-sm"><img src="59B_type2.png" class="w-full border rounded-xl shadow-sm"></div>
+            <div class="space-y-4"><img src="84A_type1.png" class="w-full border rounded-xl shadow-sm"><img src="84A_type2.png" class="w-full border rounded-xl shadow-sm"></div>
+            <div class="space-y-4"><img src="84B_type1.png" class="w-full border rounded-xl shadow-sm"><img src="84B_type2.png" class="w-full border rounded-xl shadow-sm"></div>
+            <div class="space-y-4"><img src="84C_type1.png" class="w-full border rounded-xl shadow-sm"><img src="84C_type2.png" class="w-full border rounded-xl shadow-sm"></div>
+            <div class="space-y-4"><img src="112_type1.png" class="w-full border rounded-xl shadow-sm"><img src="112_type2.png" class="w-full border rounded-xl shadow-sm"></div>
         </div>
     </section>
 
