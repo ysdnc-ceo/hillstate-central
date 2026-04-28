@@ -163,5 +163,37 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
     </script>
+<script>
+    document.getElementById('consultationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('submitBtn');
+        
+        // 1. 여기에 아까 복사한 구글 앱 URL을 넣으세요!
+        const scriptURL = '복사한_구글_웹앱_주소를_여기에_넣으세요'; 
+
+        btn.disabled = true;
+        btn.innerText = "전송 중...";
+
+        const formData = new FormData(this);
+        
+        fetch(scriptURL, { method: 'POST', body: formData })
+            .then(response => {
+                alert('신청이 성공적으로 완료되었습니다. 곧 연락드리겠습니다!');
+                btn.disabled = false;
+                btn.innerText = "무료 상담 신청하기";
+                this.reset(); // 입력창 비우기
+                
+                // 구글 광고 전환 체크 (있을 경우만 실행)
+                if(typeof gtag === 'function') {
+                    gtag('event', 'conversion', {'send_to': 'AW-18024921490/9IQqCNfs9J4cEJLz-ZJD'});
+                }
+            })
+            .catch(error => {
+                alert('전송 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+                btn.disabled = false;
+                btn.innerText = "무료 상담 신청하기";
+            });
+    });
+</script>
 </body>
 </html>
