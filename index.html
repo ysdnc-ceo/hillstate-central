@@ -1,147 +1,167 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
-    <title>평택역 힐스테이트 센트럴</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18024921490"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-18024921490');
-    </script>
-    <style>
-        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .animate-marquee { display: inline-block; animation: marquee 40s linear infinite; }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        @keyframes flash-red {
-            0%, 100% { background-color: rgba(128, 0, 32, 1); color: white; border-color: rgba(255,255,255,0.3); }
-            50% { background-color: rgba(255, 255, 255, 0.95); color: #800020; border-color: rgba(128,0,32,0.2); }
-        }
-        .animate-flash-slow { animation: flash-red 4s infinite ease-in-out; }
-        @keyframes blink { 0%, 100% { background-color: #800020; transform: scale(1); } 50% { background-color: #d40035; transform: scale(1.05); } }
-        .animate-blink { animation: blink 1.5s infinite; }
-        html { scroll-behavior: smooth; }
-        .section-title { position: relative; display: inline-block; padding-bottom: 12px; margin-bottom: 32px; font-weight: 900; }
-        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background-color: #800020; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <title>평택역 힐스테이트 센트럴</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18024921490"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18024921490');
+    </script>
+    <style>
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .animate-marquee { display: inline-block; animation: marquee 40s linear infinite; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        /* [수정] 붉은색 배경 플래시 애니메이션: 4초 주기로 천천히 변경 */
+        @keyframes flash-red {
+            0%, 100% { background-color: rgba(128, 0, 32, 1); color: white; border-color: rgba(255,255,255,0.3); }
+            50% { background-color: rgba(255, 255, 255, 0.95); color: #800020; border-color: rgba(128,0,32,0.2); }
+        }
+        /* 속도를 4s로 느리게 조절 */
+        .animate-flash-slow { animation: flash-red 4s infinite ease-in-out; }
+
+        @keyframes blink { 0%, 100% { background-color: #800020; transform: scale(1); } 50% { background-color: #d40035; transform: scale(1.05); } }
+        .animate-blink { animation: blink 1.5s infinite; }
+        
+        html { scroll-behavior: smooth; }
+        .section-title { position: relative; display: inline-block; padding-bottom: 12px; margin-bottom: 32px; font-weight: 900; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background-color: #800020; }
+    </style>
 </head>
 <body class="bg-gray-50 text-slate-900 overflow-x-hidden font-sans">
 
-    <header class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50">
-        <div class="flex justify-between items-center px-4 py-3 border-b border-gray-100">
-            <a href="javascript:location.reload()" class="flex items-center hover:opacity-80 transition-opacity shrink-0">
-                <img src="logo1.png" alt="로고1" class="h-4 md:h-6" onerror="this.style.display='none'">
-                <img src="logo2.png" alt="로고2" class="h-5 md:h-8 ml-2" onerror="this.style.display='none'">
-            </a>
-            <a href="tel:1688-4609" onclick="gtag('event', 'conversion', {'send_to': 'AW-18024921490/9IQqCNfs9J4cEJLz-ZJD'});" class="flex items-center gap-1 border-2 border-[#800020] text-[#800020] px-2 py-1 rounded-full font-black text-[11px] md:text-base shrink-0">
-                📞 1688-4609
-            </a>
-        </div>
-        <div class="bg-[#800020] text-white py-2 overflow-hidden whitespace-nowrap border-b border-[#a00028]">
-            <div class="animate-marquee text-xs font-medium">
-                <span class="mx-8 text-yellow-300 font-bold">★500만원으로 입주까지!★</span>
-                <span class="mx-8">#GTX-A 연장확정 #GTX-C 강남연결 #KTX 트리플 초역세권</span>
-                <span class="mx-8 text-yellow-300 font-bold">★관심고객 등록 시 미공개 정보 우선 안내★</span>
-            </div>
-        </div>
-    </header>
-
-    <section class="w-full relative">
-        <div class="absolute top-4 right-4 z-30 animate-flash-slow px-3 py-3 shadow-2xl border rounded-xl font-black text-[12px] md:text-lg whitespace-nowrap tracking-tighter">
-            [500만원으로 입주까지!]
-        </div>
-        <img src="main-vision.png" alt="메인 조감도" class="w-full h-auto relative z-10">
-    </section>
-
-    <section id="interest" class="reveal py-24 px-6 bg-slate-50 border-t">
-        <div class="max-w-md mx-auto bg-white border-4 border-[#800020] p-8 rounded-[40px] shadow-2xl relative">
-            <div class="text-center mb-8">
-                <h3 class="text-3xl font-black text-slate-800 mb-2">관심고객 등록</h3>
-                <p class="text-lg font-black text-[#800020]">500만원으로 입주까지!</p>
-            </div>
-            
-            <form id="consultationForm" class="space-y-4">
-                <input type="text" id="userName" name="name" required placeholder="성함" class="w-full p-4 bg-slate-50 rounded-2xl border outline-none text-lg">
-                <input type="tel" id="userPhone" name="phone" required placeholder="연락처 (- 없이)" class="w-full p-4 bg-slate-50 rounded-2xl border outline-none text-lg">
-                <select id="userTime" name="time" class="w-full p-4 bg-slate-50 rounded-2xl border outline-none text-lg">
-                    <option value="anytime">통화 가능 시간 : 언제나 가능</option>
-                    <option value="morning">오전 (09:00 ~ 12:00)</option>
-                    <option value="afternoon">오후 (12:00 ~ 18:00)</option>
-                    <option value="evening">저녁 (18:00 이후)</option>
-                </select>
-                <button type="submit" id="submitBtn" class="w-full py-5 bg-[#800020] text-white font-black rounded-2xl text-xl shadow-lg active:scale-95 transition-all mt-4">무료 상담 신청하기</button>
-            </form>
-        </div>
-    </section>
-
-    <script>
-        document.getElementById('consultationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const btn = document.getElementById('submitBtn');
-            const scriptURL = '여기에_복사한_URL을_넣으세요'; // 👈 구글 웹 앱 URL을 여기에 붙여넣으세요!
-
-            btn.disabled = true;
-            btn.innerText = "전송 중...";
-
-            const formData = new FormData(this);
-            
-            fetch(scriptURL, { method: 'POST', body: formData })
-                .then(response => {
-                    alert('신청이 성공적으로 완료되었습니다. 곧 연락드리겠습니다!');
-                    btn.disabled = false;
-                    btn.innerText = "무료 상담 신청하기";
-                    this.reset();
-                    // 구글 광고 전환 태그 실행
-                    gtag('event', 'conversion', {'send_to': 'AW-18024921490/9IQqCNfs9J4cEJLz-ZJD'});
-                })
-                .catch(error => {
-                    alert('오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
-                    btn.disabled = false;
-                    btn.innerText = "무료 상담 신청하기";
-                });
-        });
-
-        // 스크롤 애니메이션
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('active'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-    </script>
-<script>
-    document.getElementById('consultationForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const btn = document.getElementById('submitBtn');
+    <header class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50">
+        <div class="flex justify-between items-center px-4 py-3 border-b border-gray-100">
+            <a href="javascript:location.reload()" class="flex items-center hover:opacity-80 transition-opacity shrink-0">
+                <img src="logo1.png" alt="로고1" class="h-4 md:h-6" onerror="this.style.display='none'">
+                <img src="logo2.png" alt="로고2" class="h-7 md:h-10 ml-1" onerror="this.style.display='none'">
+            </a>
+            
+            <a href="tel:1688-4609" onclick="gtag('event', 'conversion', {'send_to': 'AW-18024921490/9IQqCNfs9J4cEJLz-ZJD'});" class="flex items-center gap-1 border-2 border-[#800020] text-[#800020] px-2 py-1 rounded-full font-black text-[11px] md:text-base shrink-0">
+                📞 1688-4609
+            </a>
+        </div>
         
-        // 1. 여기에 아까 복사한 구글 앱 URL을 넣으세요!
-        const scriptURL = '복사한_구글_웹앱_주소를_여기에_넣으세요'; 
+        <div class="bg-[#800020] text-white py-2 overflow-hidden whitespace-nowrap border-b border-[#a00028]">
+            <div class="animate-marquee text-xs font-medium">
+                <span class="mx-8 text-yellow-300 font-bold">★500만원으로 입주까지!★</span>
+                <span class="mx-8">#GTX-A 연장확정 #GTX-C 강남연결 #KTX 트리플 초역세권</span>
+                <span class="mx-8 text-yellow-300 font-bold">★관심고객 등록 시 미공개 정보 우선 안내★</span>
+                <span class="mx-8">평택역 복합문화광장 조성사업 최대 수혜단지</span>
+                <span class="mx-8 font-bold">삼성전자 P5 2028년 가동 예정</span>
+            </div>
+        </div>
+    </header>
 
-        btn.disabled = true;
-        btn.innerText = "전송 중...";
+    <div class="bg-white py-3 flex justify-center gap-2 px-4 overflow-x-auto whitespace-nowrap border-b border-gray-50 shadow-inner">
+        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full font-bold text-[11px] md:text-xs border border-blue-100">#GTX-A 연장확정</span>
+        <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full font-bold text-[11px] md:text-xs border border-orange-100">#GTX-C 강남연결</span>
+        <span class="bg-red-50 text-red-700 px-3 py-1 rounded-full font-bold text-[11px] md:text-xs border border-red-100">#KTX 초역세권</span>
+    </div>
 
-        const formData = new FormData(this);
-        
-        fetch(scriptURL, { method: 'POST', body: formData })
-            .then(response => {
-                alert('신청이 성공적으로 완료되었습니다. 곧 연락드리겠습니다!');
-                btn.disabled = false;
-                btn.innerText = "무료 상담 신청하기";
-                this.reset(); // 입력창 비우기
-                
-                // 구글 광고 전환 체크 (있을 경우만 실행)
-                if(typeof gtag === 'function') {
-                    gtag('event', 'conversion', {'send_to': 'AW-18024921490/9IQqCNfs9J4cEJLz-ZJD'});
-                }
-            })
-            .catch(error => {
-                alert('전송 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
-                btn.disabled = false;
-                btn.innerText = "무료 상담 신청하기";
-            });
-    });
-</script>
+    <section class="w-full relative">
+        <div class="absolute top-4 right-4 z-30 animate-flash-slow px-3 py-1.5 shadow-2xl border rounded-xl font-black text-sm md:text-xl whitespace-nowrap tracking-tight">
+            [500만원으로 입주까지!]
+        </div>
+        <img src="main-visual.jpg" alt="메인 조감도" class="w-full h-auto relative z-10">
+    </section>
+
+    <section class="p-4 bg-white sticky top-[100px] md:top-[106px] z-40 shadow-sm border-b">
+        <div class="flex gap-2 w-full max-w-xl mx-auto">
+            <button onclick="document.getElementById('env').scrollIntoView()" class="flex-1 h-14 bg-slate-100 rounded-xl font-bold text-sm md:text-base active:scale-95 transition-all">입지환경</button>
+            <button onclick="document.getElementById('complex').scrollIntoView()" class="flex-1 h-14 bg-slate-100 rounded-xl font-bold text-sm md:text-base active:scale-95 transition-all">단지안내</button>
+            <button onclick="document.getElementById('plan').scrollIntoView()" class="flex-1 h-14 bg-slate-100 rounded-xl font-bold text-sm md:text-base active:scale-95 transition-all">평면정보</button>
+            <button onclick="document.getElementById('interest').scrollIntoView()" class="flex-1 h-14 animate-blink text-white rounded-xl font-black text-sm md:text-base shadow-lg">관심고객</button>
+        </div>
+    </section>
+
+    <section id="env" class="reveal py-20 px-4 text-center bg-white border-b">
+        <h2 class="section-title text-3xl">입지환경</h2>
+        <div class="max-w-4xl mx-auto space-y-12">
+            <img src="map.png" alt="지도" class="w-full rounded-2xl shadow-lg">
+            <img src="premium1.png" alt="프리미엄" class="w-full rounded-2xl shadow-2xl border-4 border-slate-100">
+        </div>
+    </section>
+
+    <section id="complex" class="reveal py-20 bg-slate-100 px-4 text-center border-b">
+        <h2 class="section-title text-3xl text-slate-800">단지안내</h2>
+        <div class="max-w-4xl mx-auto space-y-8">
+            <img src="danzi.jpg" alt="단지" class="w-full rounded-2xl shadow-md">
+            <img src="community1.jpg" alt="커뮤니티1" class="w-full rounded-xl shadow-md border-4 border-white">
+            <img src="community2.jpg" alt="커뮤니티2" class="w-full rounded-xl shadow-md border-4 border-white">
+            <img src="system.png" alt="시스템" class="w-full rounded-xl shadow-lg">
+            <img src="brand_01.png" alt="브랜드01" class="w-full rounded-xl shadow-lg">
+            <img src="brand_02.png" alt="브랜드02" class="w-full rounded-xl shadow-lg">
+        </div>
+    </section>
+
+    <section id="plan" class="reveal py-20 px-4 text-center bg-white border-b">
+        <h2 class="section-title text-3xl">평면정보</h2>
+        <div class="max-w-4xl mx-auto space-y-16">
+            <div class="space-y-4"><img src="45_type1.jpg" class="w-full border rounded-xl shadow-sm"><img src="45_type2.jpg" class="w-full border rounded-xl shadow-sm"></div>
+            <div class="space-y-4"><img src="59A_type1.jpg" class="w-full border rounded-xl shadow-sm"><img src="59A_type2.jpg" class="w-full border rounded-xl shadow-sm"></div>
+            <div class="space-y-4"><img src="59B_type1.jpg" class="w-full border rounded-xl shadow-sm"><img src="59B_type2.jpg" class="w-full border rounded-xl shadow-sm"></div>
+            <div class="space-y-4"><img src="84A_type1.jpg" class="w-full border rounded-xl shadow-sm"><img src="84A_type2.jpg" class="w-full border rounded-xl shadow-sm"></div>
+            <div class="space-y-4"><img src="84B_type1.jpg" class="w-full border rounded-xl shadow-sm"><img src="84B_type2.jpg" class="w-full border rounded-xl shadow-sm"></div>
+            <div class="space-y-4"><img src="84C_type1.jpg" class="w-full border rounded-xl shadow-sm"><img src="84C_type2.jpg" class="w-full border rounded-xl shadow-sm"></div>
+            <div class="space-y-4"><img src="112_type1.jpg" class="w-full border rounded-xl shadow-sm"><img src="112_type2.jpg" class="w-full border rounded-xl shadow-sm"></div>
+        </div>
+    </section>
+
+    <section id="interest" class="reveal py-24 px-6 bg-slate-50 border-t">
+        <div class="max-w-md mx-auto bg-white border-4 border-[#800020] p-8 rounded-[40px] shadow-2xl relative">
+            <div class="text-center mb-8">
+                <h3 class="text-3xl font-black text-slate-800 mb-2">관심고객 등록</h3>
+                <div class="inline-block pb-1 border-b-4 border-yellow-400">
+                    <p class="text-xl md:text-2xl font-black text-[#800020]">500만원으로 입주까지!</p>
+                </div>
+            </div>
+            
+            <div class="space-y-4">
+                <input type="text" placeholder="성함" class="w-full p-4 bg-slate-50 rounded-2xl border outline-none text-lg">
+                <input type="tel" placeholder="연락처 (- 없이)" class="w-full p-4 bg-slate-50 rounded-2xl border outline-none text-lg">
+                <select class="w-full p-4 bg-slate-50 rounded-2xl border outline-none text-lg">
+                    <option value="anytime">통화 가능 시간 : 언제나 가능</option>
+                    <option value="morning">오전 (09:00 ~ 12:00)</option>
+                    <option value="afternoon">오후 (12:00 ~ 18:00)</option>
+                    <option value="evening">저녁 (18:00 이후)</option>
+                </select>
+                <button onclick="gtag('event', 'conversion', {'send_to': 'AW-18024921490/9IQqCNfs9J4cEJLz-ZJD'});" class="w-full py-5 bg-[#800020] text-white font-black rounded-2xl text-xl shadow-lg active:scale-95 transition-all mt-4">무료 상담 신청하기</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#000033] py-12 px-8">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between gap-6 border-t border-white/5 pt-8">
+            <div class="text-[11px] text-slate-500 space-y-1.5 leading-relaxed">
+                <p>홈페이지 관리자: 강채원 &nbsp; | &nbsp; 대표번호: 1688-4609</p>
+                <p>이메일: kcwlove12@naver.com</p>
+                <p>현장주소: 경기도 평택시 합정동 835번지 일원</p>
+            </div>
+            <div class="text-[10px] text-slate-600 font-light max-w-[300px]">※ 본 사이트의 모든 정보는 소비자의 이해를 돕기 위한 홍보 자료로 실제와 차이가 있을 수 있습니다.</div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-[100]">
+        <a href="https://open.kakao.com/me/ysdnc_hills" target="_blank" class="w-16 h-16 bg-[#FEE500] rounded-2xl shadow-xl flex items-center justify-center border-2 border-white">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" class="w-10 h-10" alt="카톡">
+        </a>
+        <a href="tel:1688-4609" onclick="gtag('event', 'conversion', {'send_to': 'AW-18024921490/9IQqCNfs9J4cEJLz-ZJD'});" class="w-16 h-16 bg-[#800020] rounded-2xl shadow-xl flex items-center justify-center border-2 border-white">
+            <span style="font-size: 2em;">📞</span>
+        </a>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
 </body>
 </html>
