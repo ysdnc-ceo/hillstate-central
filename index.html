@@ -18,12 +18,13 @@
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
         
-        /* 붉은색 배경 플래시 애니메이션 */
+        /* [수정] 붉은색 배경 플래시 애니메이션: 4초 주기로 천천히 변경 */
         @keyframes flash-red {
-            0%, 100% { background-color: rgba(128, 0, 32, 1); color: white; }
-            50% { background-color: rgba(255, 255, 255, 0.9); color: #800020; }
+            0%, 100% { background-color: rgba(128, 0, 32, 1); color: white; border-color: rgba(255,255,255,0.3); }
+            50% { background-color: rgba(255, 255, 255, 0.95); color: #800020; border-color: rgba(128,0,32,0.2); }
         }
-        .animate-flash { animation: flash-red 2s infinite ease-in-out; }
+        /* 속도를 4s로 느리게 조절 */
+        .animate-flash-slow { animation: flash-red 4s infinite ease-in-out; }
 
         @keyframes blink { 0%, 100% { background-color: #800020; transform: scale(1); } 50% { background-color: #d40035; transform: scale(1.05); } }
         .animate-blink { animation: blink 1.5s infinite; }
@@ -65,7 +66,7 @@
     </div>
 
     <section class="w-full relative">
-        <div class="absolute top-4 right-4 z-30 animate-flash px-4 py-3 shadow-2xl border border-white/20 font-black text-sm md:text-xl whitespace-nowrap">
+        <div class="absolute top-4 right-4 z-30 animate-flash-slow px-5 py-3.5 shadow-2xl border rounded-xl font-black text-sm md:text-xl whitespace-nowrap tracking-tight">
             [500만원으로 입주까지!]
         </div>
         <img src="main-vision.png" alt="메인 조감도" class="w-full h-auto relative z-10">
